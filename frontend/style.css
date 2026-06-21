@@ -1,0 +1,189 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:white;
+    font-family:Arial, sans-serif;
+    padding:30px;
+}
+
+.title{
+    text-align:center;
+    color:#0A4D8C;
+    margin-bottom:30px;
+}
+
+.main-container{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+}
+
+.graph-panel{
+    width:800px;
+    height:600px;
+    position: relative;
+    border:3px solid #4DA8DA;
+
+    border-radius:20px;
+
+    background:white;
+}
+
+.control-panel{
+
+    width:320px;
+
+    min-height:600px;
+
+    border:3px solid #4DA8DA;
+
+    border-radius:20px;
+
+    padding:25px;
+
+    display:flex;
+    flex-direction:column;
+}
+
+.input-group{
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+    margin-bottom:25px;
+}
+
+input, select{
+    padding:10px;
+    border-radius:10px;
+    border:2px solid #4DA8DA;
+}
+
+button{
+
+    background:#0A4D8C;
+
+    color:white;
+
+    border:none;
+
+    border-radius:12px;
+
+    padding:12px;
+
+    cursor:pointer;
+
+    font-weight:bold;
+
+    font-size:18px;
+}
+
+button:hover{
+    transform:scale(1.03);
+}
+
+#results{
+    margin-top:20px;
+}
+
+#graphCanvas{
+    width:100%;
+    height:100%;
+}
+
+.result-panel{
+
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+
+    color:#0A4D8C;
+}
+
+.result-panel h2{
+
+    text-align:center;
+    margin-bottom:10px;
+}
+
+.result-panel p{
+
+    line-height:1.5;
+}
+
+#backBtn{
+
+    margin-top:20px;
+}
+
+#traceBtn{
+    margin-top:60px;
+}
+
+.legend{
+
+    position: absolute;
+
+    bottom: 20px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    display: flex;
+    gap: 25px;
+
+    font-size: 14px;
+    font-weight: 600;
+}
+.legend-item{
+
+    display:flex;
+    align-items:center;
+    gap:8px;
+}
+
+.legend-circle{
+
+    width:16px;
+    height:16px;
+
+    border-radius:50%;
+    display:inline-block;
+}
+
+.start{
+
+    background:#2563EB;
+}
+
+.path{
+
+    background:#228B22;
+}
+
+.destination{
+
+    background:#DC2626;
+}
+
+.titleContainer{
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.titleContainer h1{
+    margin: 0;
+    color: #0A4D8C;
+}
+
+.subtitle{
+    margin-top: 6px;
+    margin-bottom: 0;
+
+    color: #555;
+    font-size: 16px;
+    font-weight: 400;
+}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OptPath</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="titleContainer">
+        <h1>OptPath</h1>
+        <p class="subtitle">
+            Visualizing BFS, DFS, Dijkstra & A*
+        </p>
+    </div>
+
+    <div class="main-container">
+
+        <div class="graph-panel">
+
+            <svg id="graphCanvas"></svg>
+
+            <div class="legend">
+
+                <div class="legend-item">
+                    <span class="legend-circle start"></span>
+                    Start Node
+                </div>
+
+                <div class="legend-item">
+                    <span class="legend-circle path"></span>
+                    Path Node
+                </div>
+
+                <div class="legend-item">
+                    <span class="legend-circle destination"></span>
+                    Destination Node
+                </div>
+
+             </div>
+
+        </div>
+
+        <div class="control-panel" id="controlPanel">
+
+            <div class="input-group">
+                <label>Enter Start Node</label>
+                <input type="text" id="startNode" maxlength="1">
+            </div>
+
+            <div class="input-group">
+                <label>Enter Destination Node</label>
+                <input type="text" id="destinationNode" maxlength="1">
+            </div>
+
+            <div class="input-group">
+                <label>Choose Algorithm</label>
+
+                <select id="algorithm">
+                    <option value="bfs">BFS</option>
+                    <option value="dfs">DFS</option>
+                    <option value="dijkstra">Dijkstra</option>
+                    <option value="astar">A*</option>
+                </select>
+            </div>
+
+            <button id="traceBtn">
+                Trace Algorithm
+            </button>
+
+            
+
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
