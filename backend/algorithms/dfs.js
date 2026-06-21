@@ -1,3 +1,23 @@
+function calculateCost(graph, path) {
+
+    let totalCost = 0;
+
+    for(let i = 0; i < path.length - 1; i++) {
+
+        const from = path[i];
+        const to = path[i + 1];
+
+        const edge =
+            graph[from].find(
+                neighbor => neighbor.node === to
+            );
+
+        totalCost += edge.weight;
+    }
+
+    return totalCost;
+}
+
 function dfs(graph, start, destination) {
 
     const stack = [[start]];
@@ -18,8 +38,10 @@ function dfs(graph, start, destination) {
         nodesTraversed++;
 
         if (node === destination) {
+
             return {
                 path,
+                totalCost: calculateCost(graph, path),
                 nodesTraversed
             };
         }
@@ -38,6 +60,7 @@ function dfs(graph, start, destination) {
 
     return {
         path: [],
+        totalCost: Infinity,
         nodesTraversed
     };
 }
