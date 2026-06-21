@@ -101,19 +101,19 @@ OptPath/
 ## Screenshots
 
 ### Home Interface
-<img src="img/1.png" width="800"/>
+<img src="imgs/1.png" width="800"/>
 
 ### BFS Visualization
-<img src="img/bfs.png" width="800"/>
+<img src="imgs/bfs.png" width="800"/>
 
 ### DFS Visualization
-<img src="img/dfs.png" width="800"/>
+<img src="imgs/dfs.png" width="800"/>
 
 ### Dijkstra Visualization
-<img src="img/dijkstra.png" width="800"/>
+<img src="imgs/dijkstra.png" width="800"/>
 
 ### A* Visualization
-<img src="img/astar.png" width="800"/>
+<img src="imgs/astar.png" width="800"/>
 
 ---
 
