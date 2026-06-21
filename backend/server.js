@@ -11,7 +11,7 @@ const astar = require("./algorithms/astar");
 const { performance } = require("perf_hooks");
 const path = require("path");
 
-//creates application object
+//application object
 const app = express();
 
 //enable cors and json parsing
@@ -25,12 +25,10 @@ app.use(
 
 const PORT = process.env.PORT || 5000;
 
-//get route for /graph
 app.get("/graph", (req, res) => {
     res.json(graph);
 });
 
-//post route for /trace
 app.post("/trace", (req, res) => {
 
     const { start, destination, algorithm } = req.body;
@@ -70,7 +68,6 @@ app.post("/trace", (req, res) => {
     res.json(result);
 });
 
-//starts server on PORT 5000
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
 });

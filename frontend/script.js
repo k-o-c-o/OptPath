@@ -22,7 +22,7 @@ const algorithmInfo = {
 
     astar: {
         name: "A* Search",
-        time: "O(E log V)",
+        time: "O((V + E) log V)",
         space: "O(V)"
     }
 };
@@ -84,30 +84,15 @@ function getWeight(from, to) {
 //edge list
 const edges = [
 
-    // Row 1
     ["A","B"],["B","C"],["C","D"],["D","E"],["E","F"],
-
-    // Row 2
     ["G","H"],["H","I"],["I","J"],["J","K"],["K","L"],
-
-    // Row 3
     ["M","N"],["N","O"],["O","P"],["P","Q"],["Q","R"],
-
-    // Row 4
     ["S","T"],["T","U"],["U","V"],["V","W"],["W","X"],
-
-    // Verticals
     ["A","G"],["B","H"],["C","I"],["D","J"],["E","K"],["F","L"],
-
     ["G","M"],["H","N"],["I","O"],["J","P"],["K","Q"],["L","R"],
-
     ["M","S"],["N","T"],["O","U"],["P","V"],["Q","W"],["R","X"],
-
-    // Diagonals
     ["A","H"],["B","I"],["C","J"],["D","K"],["E","L"],
-
     ["G","N"],["H","O"],["I","P"],["J","Q"],["K","R"],
-
     ["M","T"],["N","U"],["O","V"],["P","W"],["Q","X"]
 ];
 
@@ -154,13 +139,11 @@ function drawGraph() {
 
         if (positions[from][0] === positions[to][0]) {
 
-    // Vertical edge
         weightText.setAttribute("x", midX + 15);
         weightText.setAttribute("y", midY);
 
         } else {
 
-        // Horizontal edge
         weightText.setAttribute("x", midX);
         weightText.setAttribute("y", midY - 10);
         }
@@ -389,7 +372,6 @@ function resetHighlights() {
 }
 
 //highlight
-
 function sleep(ms) {
 
     return new Promise(resolve =>
